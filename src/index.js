@@ -29,7 +29,7 @@ const app = express()
 
 app.use(
   cors({
-    origin: process.env.CORS_ORIGIN || 'http://localhost:5174',
+    origin: process.env.CORS_ORIGIN ,
     methods: ['GET', 'POST', 'OPTIONS'],
   }),
 )
@@ -84,7 +84,7 @@ app.post('/api/registrations', async (req, res) => {
 
 connectToDatabase().then(() => {
   app.listen(PORT, () => {
-    console.log(`Reward backend listening on http://localhost:${PORT}`)
+    console.log(`Reward backend listening `)
   })
 })
 
